@@ -126,7 +126,7 @@ ggplot(df_summary, aes(x = "", y = percentage, fill = material_class)) +
     )+
   facet_wrap(~ Site)+  # Creates a separate pie chart for each site
 
-#
+#################################################################################
 
 df <- read_csv("surface_paired_merged_data.csv",)
 
@@ -153,6 +153,13 @@ site_levels <- c("Upper Bay Saltmarsh",
 df <- df %>%
   mutate(Site = factor(Site, levels = site_levels))
 
+vline_positions <- df_summary %>%
+  distinct(Sample, Site) %>%
+  count(Site, name = "n") %>%
+  mutate(cum = cumsum(n), x = cum + 0.5) %>%
+  pull(x)
+vline_positions <- vline_positions[-length(vline_positions)]
+
 
 # Summarize data: Count occurrences of material_class per site
 df_summary <- df %>%
@@ -167,6 +174,13 @@ sample_order <- df %>%
 df_summary <- df_summary %>%
   mutate(Sample = factor(Sample, levels = sample_order))
 
+vline_positions <- df_summary %>%
+  distinct(Sample, Site) %>%
+  count(Site, name = "n") %>%
+  mutate(cum = cumsum(n), x = cum + 0.5) %>%
+  pull(x)
+vline_positions <- vline_positions[-length(vline_positions)]
+
 
 # View result
 print(df_summary)
@@ -174,6 +188,7 @@ print(df_summary)
 # Plot stacked bar chart
 ggplot(df_summary, aes(x = Sample, y = count, fill = material_class)) +
   geom_bar(stat = "identity", position = "stack",color = "black") +
+  geom_vline(xintercept = vline_positions, color = "black", linetype = "solid", size = 0.5) +
   labs(x = "Samples", y = "Count", fill = "Material Class",
        title = "Distribution of Material Class by Site: Non-Fibers only") +
   theme_minimal() +
