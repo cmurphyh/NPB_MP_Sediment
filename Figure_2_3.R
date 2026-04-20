@@ -92,7 +92,8 @@ p1 <- ggplot(df_long_Con, aes(x = Site, y = Concentration, fill = Site)) +
                               size = 12, face = "bold"),
     legend.text = element_text(size = 10),
     legend.title = element_text(size = 10),
-    axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+    axis.text.x = element_blank(),
+    #axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
     axis.text.y = element_text(size = 12),
     plot.title  = element_text(size = 12, face = "bold")
   )
@@ -131,7 +132,8 @@ p2 <- ggplot(df_long_Con_mass, aes(x = Site, y = Concentration, fill = Site)) +
                               size = 12, face = "bold"),
     legend.text = element_text(size = 10),
     legend.title = element_text(size = 10),
-    axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
+    axis.text.x = element_blank(),
+    #axis.text.x = element_text(angle = 45, hjust = 1, size = 10),
     axis.text.y = element_text(size = 12),
     plot.title  = element_text(size = 12, face = "bold")
   )
