@@ -1,5 +1,5 @@
 Intertidal Spikes Samples,,,,,,,,Subtidal Spikes Samples,,,,,
-Row Labels,1000um,250um,500um,Grand Total,Recovery,,,Row Labels,250um,500um,Grand Total,Recovery,
+Row Labels,1000um,250um,500um,Grand Total,Recovery,Spiked #,,Row Labels,250um,500um,Grand Total,Recovery,Spiked #
 UNB-2-10-15,,,31,31,103%,out of 30,,SUB-3-3-S1,43,28,71,118%,out of 60
 UNB-2-00-05,,25,20,45,75%,out of 60,,SUB-3-6-S1,29,28,57,95%,out of 60
 UNB-2-05-10,1,30,28,59,98%,out of 60,,SUB-3-7-S1,18,32,50,83%,out of 60
@@ -14,8 +14,9 @@ UNB-2-50-55,,,29,29,97%,out of 30,,SUB-4-5-S1,25,30,55,92%,out of 60
 UNB-2-60-65,,28,29,57,95%,out of 60,,SUB-4-7-S1,26,29,55,92%,out of 60
 ,,,,,,,,SUB-4-7-S2,,28,28,93%,out of 30
 ,,,N=12,Average,94%,,,SUB-4-9-S1,24,30,54,90%,out of 60
-,,,,,,,,SUB-4-9-S2,,30,30,100%,out of 30
+,,,,SD,7%,,,SUB-4-9-S2,,30,30,100%,out of 30
 ,,,N=11,Average,93%,,,,,,,,
-,,,,,,,,,,N=15,Average,93%,
-,,,,,,,,,,,,,
+,,,,SD,7%,,,,,N=15,Average,93%,
+,,,,,,,,,,,SD,10%,
 ,,,,,,,,,,N=14,Average,91%,
+,,,,,,,,,,,SD,7%,
